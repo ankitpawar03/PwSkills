@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url("/Day21-Feb03/Project1/assets/pexels-maxyne-barcel-10402282\ 1.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url("./assets/pexels-maxyne-barcel-10402282\ 1.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
