@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(/Day23-Feb05/Project3/assets/bg.png);
+    background-image: url(./assets/bg.png);
     background-size: cover;
     background-attachment: fixed;
 }
