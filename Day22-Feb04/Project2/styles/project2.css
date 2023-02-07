@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+a{
+    color: black;
+    font-weight: 1;
+}
+
+li :hover{
+    color: #5955b3;
+    font-weight: 600;
+}
+
+.left-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 60px;
+    height: 100%;
+    width: 500px;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 100;
+    font-size: small;
+}
+
+.right-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    height: 100%;
+}
+
+.contact-button{
+    background-color: #5955b3;
+    color: whitesmoke;
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hero-left{
+
+    height: 500px;
+    width: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+h1{
+    color: #3c2f60;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+span{
+    color: #5955b3;
+}
+
+p{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 10;
+    color: grey;
+    margin-top: 20px;
+}
+
+.hero-right{
+
+    margin-right: 60px;
+    height: 500px;
+
+}
+
+.see-our-services{
+    background-color: #5955b3;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.see-our-services:hover{
+    background-color: #3c2f60;
+}
+
+.contact-button:hover{
+    background-color: #3c2f60;
+}
