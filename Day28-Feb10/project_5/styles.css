@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #111827;
+  color: white;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+img[alt="menu"]{
+    width: 20px;
+    display: none;
+}
+
+.home{
+    padding: 5px 10px;
+    background:  #6464E0;
+    border-radius: 15px;
+}
+
+.sec1 {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.line1{
+    font-size: 30px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.line2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h4{
+    font-size: 35px;
+    color: #C5C559;
+}
+
+img[alt="hello"]{
+   width: 45px;
+}
+
+img[alt="pc-image"] {
+  width: 30vw;
+}
+
+.sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 70px 0 0 0;
+}
+
+.sec2 h1{
+    font-size: 40px;
+}
+
+.base-line1{
+    width: 135px;
+    height: 10px;
+    background-color: #0000FF;
+    border-radius: 20px;
+    margin: 0 0 20px 0px;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+img[alt="project-image"]{
+    width: 20vw;
+}
+
+.base-line2{
+    width: 200px;
+    height: 10px;
+    background-color: #0000FF;
+    border-radius: 20px;
+}
+
+.contact{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.contact h1{
+    font-size: 40px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0 0;
+}
+
+img[alt="social"]{
+    width: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    ul{
+        display: none;
+    }
+
+    img[alt="menu"]{
+        width: 20px;
+        display: block;
+    }
+    
+
+    .sec1 , .line1, .line2, .project-list, .contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 23px;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    .contact{
+        font-size: 35px;
+    }
+
+    img[alt="pc-image"] {
+        width: 60vw;
+    }
+
+    img[alt="project-image"]{
+        width: 55vw;
+    }
+}
