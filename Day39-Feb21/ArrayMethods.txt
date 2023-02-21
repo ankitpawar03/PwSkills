@@ -1,0 +1,74 @@
+#day39 of learning full stack web development
+
+Today I learned About Array Methods in JavaScript
+
+Array methods are built-in functions in JS that allow you to perform various operations on arrays, They can be used to manipulate arrays in various ways, including adding and removing elements, sorting, transforming, and filtering the elements of an Array.
+
+Some of the common Array Methods are -
+
+pop()
+push()
+shift()
+unshift()
+unshift()
+concat()
+join()
+slice()
+splice()
+reverse()
+
+📍pop()
+
+The pop() method in JavaScript is used to remove the last element of an array and return the removed element. The method modifies the original array, by reducing its length by one.
+
+let fruits = ['apple', 'banana', 'mango'];
+let last = fruits.pop();
+console.log(fruits); // Output: [ 'apple', 'banana' ]
+console.log(last); // Output: 'cherry'
+
+📍push()
+
+The push() method in JS is used to add one or more elements to the end of an array and return the new length of the array. The push method modified the original array, so the elements are added to the end of the array.
+
+let fruits = ['apple', 'banana'];
+let length = fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'banana', 'mango']
+console.log(length); // Output: 3
+
+📍shift()
+
+The shift() method in JavaScript is used to remove the first element from an array and return the removed element. This method changes the length of the array, shifting all other elements to a lower index, to fill the gap left by the removed element.
+
+let fruits = ['apple', 'banana', 'mango'];
+let first = fruits.shift();
+console.log(fruits); // Output: ['banana', 'mango']
+console.log(first); // Output: 'apple'
+
+📍unshift()
+
+The unshift() method in JavaScript is used to add one or more elements to the beginning of an array and return the new length of the array. This method changes the length of the array and shifts all existing elements to a higher index to make room for the new elements.
+
+let fruits = ['banana', 'mango'];
+let length = fruits.unshift('apple');
+console.log(fruits); // Output: ['apple', 'banana', 'mango']
+console.log(length); // Output: 3
+
+📍concat()
+The concat method in JavaScript is used to concatenate two or more arrays into a single array. It returns a new array that consists of the elements from the original array(s) and the elements from one or more
+additional arrays. The original arrays are not modified.
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let newArray = array1.concat(array2);
+console.log(newArray);
+// Output: [1, 2, 3, 4, 5, 6]
+
+📍join()
+
+In JavaScript, the join() method is used to join all elements of an array into a string. The elements are separated by a specified separator. If no separator is provided, the elements are joined with a comma (,) by default.
+
+let fruits = ['apple', 'banana', 'cherry'];
+let result = fruits.join();
+console.log(result); // 'apple,banana,cherry'
+let result = fruits.join('-');
+console.log(result); // 'apple-banana-cherry'
