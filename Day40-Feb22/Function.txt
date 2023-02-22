@@ -1,0 +1,72 @@
+#day40 in the learning of full stack web development
+
+Today I learned about Functions in JS
+
+📍The concept of functions came into existence to support the way we organize and structure code.
+
+📍A function is a block of code that performs a specific task and can be reused throughout the program.
+
+📍This allows us to write more efficient and modular code, as well as the ability to easily update or change the behavior of the program by modifying the functions. Additionally, by using functions we can make the code more readable and easier to understand.
+
+📍Functions in JavaScript are first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, and returned from functions.
+
+Advantages of using functions -
+
+1. Functions allow us to define a block of code once and reuse it multiple times throughout your program. So we need not repeat the same lines of code every time.
+
+2. While solving a problem we split them into subproblems so we could solve smaller problems to achieve the final result. Here functions can be used to break down complex problems into smaller, more manageable tasks.
+
+3. Functions can make code more readable by giving it a clear structure and making it easy to understand what the code is doing.
+
+📍The basic syntax for a function declaration is :
+
+function functionName(){
+//code to be performed
+};
+
+The "function" keyword is used to declare a function.
+
+In JavaScript, a function's name is used to identify and call the function.
+
+The function body is the block of code that is executed when the function is called.
+
+📍Calling a Function.
+
+Calling a function simply means executing a block of code that has been declared previously. The most common way of calling a function is by using the function name followed by parentheses ().
+
+Ex- functionName();
+
+📍Parameters& Return Statement.
+
+A parameter is a variable that is declared within the parentheses of the function declaration. It serves as a placeholder or a reference for the input value that will be passed to the function when it is called.
+
+Parameters are dummy names we pass/give a function when we are declaring a function.
+Ex-
+function functionName(x){
+//code to be performed
+};
+
+Here 'x' is a parameter
+
+
+📍Argument -
+
+Arguments are the actual values that are passed to the function when it is called. The number of arguments must always be equal to the number of parameters, else would raise an error.
+
+Ex-
+functionName(x)
+
+Here 'x' is an argument
+
+
+📍Return -
+
+The return statement is used to output a value from a function. The return statement terminates the execution of the function. It also specifies the value that should be returned to the calling code. The value returned by the function can be assigned to a variable or used in an expression.
+
+Ex-
+function functionName(x){
+//code to be performed
+return;
+};
+
+It will return value as an output from the function after its execution.
