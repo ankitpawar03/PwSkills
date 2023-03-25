@@ -1,0 +1,25 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 90px;
+    background: radial-gradient( white, blue);
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+
+h1{
+    position: absolute;
+    bottom: 10px;
+}

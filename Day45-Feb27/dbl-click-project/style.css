@@ -1,0 +1,57 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/space.jpg);
+    background-size: cover;
+}
+
+.btn{
+    padding: 1px 10px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.716);
+    background-color: rgba(23, 32, 118, 0.502);
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    top: 100px;
+}
+
+.launch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    transition: 5s ease-in-out;
+}
+
+.rocket{
+    z-index: 1;
+}
+
+.fire{
+    display: flex;
+    rotate: 180deg;
+    position: relative;
+    bottom: 25px;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.space{
+
+    display: flex;
+    background-size: cover;
+
+}
+
+.moon{
+    display: flex;
+    position: fixed;
+    bottom: -400px;
+    z-index: -5;
+}
