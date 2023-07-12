@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      /* Navbar styles */
+      .navbar {
+        background-color: #3f007d;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: #fff;
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .navbar-nav {
+        display: flex;
+      }
+
+      .nav-link {
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      /* Hamburger menu styles */
+      .hamburger-menu {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .hamburger-menu div {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Media queries for responsive behavior */
+      @media (max-width: 768px) {
+        .navbar-nav {
+          display: none;
+        }
+
+        .navbar-nav.show {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: #7b7b00;
+          padding: 10px;
+        }
+
+        .navbar-nav.show .nav-link {
+          margin: 10px 50%;
+        }
+
+        .hamburger-menu {
+          display: block;
+        }
+
+        .hamburger-menu.active div:first-child {
+          transform: rotate(45deg) translate(4px, 4px);
+        }
+
+        .hamburger-menu.active div:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger-menu.active div:last-child {
+          transform: rotate(-45deg) translate(4px, -4px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">Logo</div>
+      <div class="navbar-nav" id="navbar-nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>
