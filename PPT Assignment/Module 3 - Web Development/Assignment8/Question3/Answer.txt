@@ -1,0 +1,16 @@
+Q.3 Difference between Virtual Dom vs Real Dom.
+Ans- The main difference between the Virtual DOM and the Real DOM lies in how they are structured, updated, and their impact on performance.
+
+Virtual DOM:
+1. Structure: The Virtual DOM is a lightweight copy or representation of the actual DOM. It is a JavaScript object that mimics the structure of the real DOM, with nodes representing elements, attributes, and content.
+2. Updating: When using libraries/frameworks like React, changes are made to the Virtual DOM first. These changes are then compared with the previous Virtual DOM to determine the minimal set of changes needed to update the real DOM.
+3. Efficiency: The Virtual DOM allows for efficient updates by performing a diffing algorithm. It compares the previous Virtual DOM with the updated Virtual DOM and identifies the specific parts of the DOM that have changed. Only those specific parts are updated in the real DOM, minimizing unnecessary updates and improving performance.
+4. Performance Impact: The Virtual DOM helps optimize UI updates, reducing the number of manipulations required on the actual DOM. This results in improved performance and a smoother user experience.
+
+Real DOM:
+1. Structure: The Real DOM is the actual document object model of the web page or application. It is the representation of the HTML structure as rendered by the browser.
+2. Updating: Whenever there are changes to the web page's content, attributes, or structure, the real DOM needs to be updated directly. This involves manipulating the existing DOM nodes, adding or removing elements, or modifying attributes.
+3. Efficiency: Updating the Real DOM can be computationally expensive, especially when there are complex UI structures or frequent updates. Every change triggers a recalculation of the layout and repaint of affected elements, which can slow down performance.
+4. Performance Impact: Directly updating the Real DOM can be slower compared to using techniques like the Virtual DOM. Frequent updates to the Real DOM can result in a noticeable performance impact, particularly for larger or more complex applications.
+
+In summary, the Virtual DOM provides an abstraction layer between developers and the actual DOM, allowing for efficient updates and improved performance. It minimizes the number of changes needed to be applied to the real DOM by comparing the previous and updated Virtual DOM. On the other hand, the Real DOM represents the actual HTML structure rendered by the browser and requires direct manipulation, which can be slower and have a greater performance impact.

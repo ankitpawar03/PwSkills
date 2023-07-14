@@ -1,0 +1,94 @@
+Q.5 Difference between class & function based component?
+Ans- The main difference between class-based components and function-based components in React lies in how they are defined and how they handle state and lifecycle methods.
+
+1. Definition:
+   - Class-based components: Class components are defined as ES6 classes that extend the `React.Component` base class. They have a `render()` method that returns the component's JSX. Additional methods such as lifecycle methods can be defined within the class.
+   
+   Example:
+
+   class ClassComponent extends React.Component {
+     render() {
+       return <div>Class Component</div>;
+     }
+   }
+
+
+   - Function-based components: Function components, also known as stateless components or functional components, are defined as JavaScript functions. They take in props as arguments and return the component's JSX.
+
+   Example:
+
+   function FunctionComponent(props) {
+     return <div>Function Component</div>;
+   }
+
+
+2. State and Lifecycle Methods:
+   - Class-based components: Class components can have an internal state that is managed using `this.state` and updated using `this.setState()`. They can also define lifecycle methods such as `componentDidMount()`, `componentDidUpdate()`, and `componentWillUnmount()` to perform actions at specific points in the component's lifecycle.
+
+   Example:
+
+   class Counter extends React.Component {
+     constructor(props) {
+       super(props);
+       this.state = {
+         count: 0
+       };
+     }
+
+     componentDidMount() {
+       // Perform actions after the component is mounted
+     }
+
+     componentDidUpdate() {
+       // Perform actions after the component updates
+     }
+
+     componentWillUnmount() {
+       // Perform actions before the component is unmounted
+     }
+
+     render() {
+       return (
+         <div>
+           <p>Count: {this.state.count}</p>
+           <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+             Increment
+           </button>
+         </div>
+       );
+     }
+   }
+
+   - Function-based components: Function components are primarily used for presentational purposes and don't have built-in state management or lifecycle methods. However, with the introduction of React Hooks in React 16.8, function components can now handle state and lifecycle features using hooks like `useState` and `useEffect`.
+
+   Example using hooks:
+
+   import React, { useState, useEffect } from 'react';
+
+   function Counter() {
+     const [count, setCount] = useState(0);
+
+     useEffect(() => {
+       // Perform actions after the component is mounted or updated
+       // (equivalent to componentDidMount and componentDidUpdate)
+     }, [count]);
+
+     return (
+       <div>
+         <p>Count: {count}</p>
+         <button onClick={() => setCount(count + 1)}>Increment</button>
+       </div>
+     );
+   }
+
+3. Syntax and Boilerplate:
+   - Class-based components typically require more syntax and boilerplate code compared to function-based components. They involve defining a class, extending a base class, and implementing methods explicitly.
+   
+   - Function-based components have a simpler syntax and require fewer lines of code. They are easier to read and write, making them more lightweight and concise.
+
+4. Compatibility:
+   - Class-based components have been the traditional way of writing React components and are compatible with all versions of React.
+   
+   - Function-based components with hooks were introduced in React 16.8 and are compatible with React versions 16.8 or later. It is recommended to use hooks in newer React projects, as they provide a more modern and streamlined way to handle state and side effects.
+
+Both class-based and function-based components have their use cases, and the choice between them depends on the specific requirements and preferences of the project. However, the trend in React development is moving towards function-based components with hooks due to their simplicity and improved readability.

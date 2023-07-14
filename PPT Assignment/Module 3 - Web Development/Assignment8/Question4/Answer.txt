@@ -1,0 +1,50 @@
+Q.4 Whats component? Types of component?
+Ans- In the context of web development, a component is a reusable and self-contained piece of code that encapsulates a specific functionality, UI element, or behavior. Components are building blocks that help structure and modularize web applications.
+
+In React, components are the fundamental building blocks of the UI. They can be classified into three main types:
+
+1. Function Components:
+Function components, also known as stateless components, are defined as JavaScript functions. They take in props (input data) as arguments and return JSX (JavaScript XML) elements that define the component's UI. Function components are simpler and more lightweight compared to class components.
+
+Example of a function component in React:
+
+function MyComponent(props) {
+  return <div>Hello, {props.name}!</div>;
+}
+
+2. Class Components:
+Class components are defined as ES6 classes that extend the base React.Component class. They have a render() method that returns the component's JSX. Class components can have an internal state and lifecycle methods for managing dynamic behavior and performing actions at specific points in the component's lifecycle.
+
+Example of a class component in React:
+
+class MyComponent extends React.Component {
+  render() {
+    return <div>Hello, {this.props.name}!</div>;
+  }
+}
+
+3. React Hooks (Functional Components with State):
+React Hooks are a feature introduced in React 16.8 that allows function components to have state and lifecycle features previously available only in class components. Hooks provide a way to manage state, use context, and perform other side effects in function components without the need for classes.
+
+Example of a functional component with hooks in React:
+
+import React, { useState, useEffect } from 'react';
+
+function MyComponent(props) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+These are the main types of components in React. However, in addition to these, there are other types of components such as higher-order components (HOCs), which are functions that take a component as input and return a new enhanced component, and presentational components, which focus solely on the presentation and receive all the necessary data and behaviors as props.
+
+Components play a crucial role in React development, as they promote reusability, maintainability, and modularity in building complex user interfaces.

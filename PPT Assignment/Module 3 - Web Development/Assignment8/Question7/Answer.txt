@@ -1,0 +1,38 @@
+Q.7 Explain Prop Drilling in React & Ways to avoid it.
+Ans- Prop drilling is a term used in React to describe a situation where props are passed through multiple intermediate components that don't need them, just to reach a deeply nested component that actually requires the data. This can lead to cluttered and inefficient code.
+
+Here's an example to illustrate prop drilling:
+
+// ParentComponent passes the data to ChildComponent through IntermediateComponent
+function ParentComponent() {
+  const data = "Hello, prop drilling!";
+  return <IntermediateComponent data={data} />;
+}
+
+function IntermediateComponent({ data }) {
+  return <ChildComponent data={data} />;
+}
+
+function ChildComponent({ data }) {
+  return <div>{data}</div>;
+}
+
+In the above example, `ParentComponent` has some data that it needs to pass down to `ChildComponent`. However, `IntermediateComponent` doesn't need the data itself but is required to pass it down. This extra layer of passing props without using them is known as prop drilling.
+
+Prop drilling can make the codebase harder to maintain and understand, as components in the middle of the hierarchy become tightly coupled to the data they don't need. Additionally, if the intermediate components need to be modified or new components are added in the hierarchy, the prop drilling pattern may require significant changes.
+
+To avoid prop drilling, there are a few techniques you can employ:
+
+1. Context API:
+   The Context API is a built-in feature in React that allows you to share data between components without explicitly passing it through props. You can create a context at a higher level in the component tree and provide values to it. Then, any component within the tree can consume the context and access the provided values.
+
+2. Redux or other state management libraries:
+   State management libraries like Redux provide a centralized store to hold application state. Components can access the required data from the store without the need for prop drilling. Redux utilizes a store, actions, and reducers to manage and update the state across the application.
+
+3. React's component composition:
+   Rather than passing props through multiple intermediate components, you can consider restructuring your component hierarchy. By breaking down your components into smaller, more focused components, you can pass props directly to the components that need them, avoiding unnecessary drilling.
+
+4. React Hooks:
+   With React Hooks, you can use the `useContext` hook to consume context values directly within functional components. This eliminates the need for prop drilling by accessing the required data from the nearest context provider.
+
+By utilizing these techniques, you can eliminate or minimize prop drilling in your React applications, leading to cleaner and more maintainable code. Choosing the right approach depends on the complexity of your application and the specific use case.
