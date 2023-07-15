@@ -1,0 +1,51 @@
+Q.7 How do you handle conditional rendering in React?
+
+Ans- Conditional rendering in React allows you to conditionally display components, elements, or content based on certain conditions or values. There are several ways to handle conditional rendering in React:
+
+1. **if/else statements**: You can use regular JavaScript `if`/`else` statements within the `render` method of a component to conditionally render different content based on a condition. Here's an example:
+
+import React from 'react';
+
+function ExampleComponent({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <p>Welcome, user!</p>;
+  } else {
+    return <button>Login</button>;
+  }
+}
+
+2. **Ternary operator**: The ternary operator (`condition ? expression1 : expression2`) is a concise way to conditionally render content based on a condition. It can be used within JSX expressions to handle conditional rendering. Example:
+
+import React from 'react';
+
+function ExampleComponent({ isLoggedIn }) {
+  return isLoggedIn ? <p>Welcome, user!</p> : <button>Login</button>;
+}
+
+
+3. **Logical && operator**: The logical `&&` operator can be used to conditionally render content when a condition is true. If the condition is false, the component or content after `&&` is not rendered. Example:
+
+import React from 'react';
+
+function ExampleComponent({ isLoggedIn }) {
+  return isLoggedIn && <p>Welcome, user!</p>;
+}
+
+4. **Switch statement**: In cases where you have multiple conditions and corresponding components to render, you can use a `switch` statement combined with variables or state to handle conditional rendering. Example:
+
+import React from 'react';
+
+function ExampleComponent({ status }) {
+  switch (status) {
+    case 'loading':
+      return <p>Loading...</p>;
+    case 'success':
+      return <p>Data loaded successfully!</p>;
+    case 'error':
+      return <p>Error occurred while loading data.</p>;
+    default:
+      return null;
+  }
+}
+
+These are some of the common approaches for conditional rendering in React. The choice of method depends on the complexity of conditions and the structure of component. Use the method that provides the most clarity and maintainability for specific use case.

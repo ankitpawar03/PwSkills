@@ -1,0 +1,83 @@
+Q.3 How to pass data from one component to another component?
+Ans- In React, there are multiple ways to pass data from one component to another. The approach you choose depends on the relationship between the components and the complexity of the data you want to pass. Here are a few commonly used methods:
+
+1. **Props**: The most common way to pass data from a parent component to a child component is through props. In the parent component, can define attributes on the child component and pass data as values. The child component can then access and use the data through its props.
+
+   Example:
+
+   // ParentComponent.js
+   import React from 'react';
+   import ChildComponent from './ChildComponent';
+
+   function ParentComponent() {
+     const data = 'Hello, Child!';
+     return <ChildComponent message={data} />;
+   }
+
+   // ChildComponent.js
+   import React from 'react';
+
+   function ChildComponent(props) {
+     return <p>{props.message}</p>;
+   }
+
+2. **Context**: React Context allows to create a shared data store that can be accessed by multiple components at different levels of the component tree. Context provides a way to pass data without having to explicitly pass props through every intermediate component.
+
+   Example:
+
+   // DataContext.js
+   import React from 'react';
+
+   const DataContext = React.createContext();
+
+   export default DataContext;
+
+   // ParentComponent.js
+   import React from 'react';
+   import ChildComponent from './ChildComponent';
+   import DataContext from './DataContext';
+
+   function ParentComponent() {
+     const data = 'Hello, Child!';
+     return (
+       <DataContext.Provider value={data}>
+         <ChildComponent />
+       </DataContext.Provider>
+     );
+   }
+
+   // ChildComponent.js
+   import React from 'react';
+   import DataContext from './DataContext';
+
+   function ChildComponent() {
+     const data = React.useContext(DataContext);
+     return <p>{data}</p>;
+   }
+
+3. **State Management Libraries**: For complex applications with a large amount of shared state or when components are not directly related, can use state management libraries like Redux, MobX, or Zustand. These libraries provide a centralized store that can be accessed and updated from any component in the application.
+
+   Example (using Redux):
+
+   // ParentComponent.js
+   import React from 'react';
+   import { useDispatch } from 'react-redux';
+   import { setData } from './store/actions';
+
+   function ParentComponent() {
+     const dispatch = useDispatch();
+     const data = 'Hello, Child!';
+     dispatch(setData(data));
+     return <ChildComponent />;
+   }
+
+   // ChildComponent.js
+   import React from 'react';
+   import { useSelector } from 'react-redux';
+
+   function ChildComponent() {
+     const data = useSelector((state) => state.data);
+     return <p>{data}</p>;
+   }
+
+These are just a few examples of how can pass data between components in React. The method to choose depends on the specific needs of application, the component hierarchy, and the complexity of the data want to pass.

@@ -1,0 +1,18 @@
+Q.1 What are hooks in react? how to identify hooks?
+Ans- In React, hooks are functions that allow you to use state and other React features in functional components, instead of having to use class components. They were introduced in React version 16.8 as a way to write more reusable and concise code.
+
+Hooks provide a way to "hook into" React's lifecycle and state management features, enabling you to add state and other React features to functional components. They are identified by the naming convention that begins with the prefix "use" followed by a descriptive name. For example, `useState`, `useEffect`, `useContext`, `useRef`, etc., are all built-in hooks provided by React.
+
+Here are a few commonly used hooks in React:
+
+1. `useState`: This hook allows you to add state to functional components. It returns a stateful value and a function to update that value.
+
+2. `useEffect`: This hook allows you to perform side effects in functional components. It runs a function after every render or when specific dependencies change.
+
+3. `useContext`: This hook allows you to access the context value that has been provided higher up in the component tree.
+
+4. `useRef`: This hook provides a way to create mutable references that persist across re-renders of the component.
+
+5. `useReducer`: This hook is an alternative to `useState` and provides a more powerful way to manage complex state logic using a reducer function.
+
+Hooks can be identified by their unique naming convention and are typically called directly within the body of functional components. They allow you to access and manage state, perform side effects, work with context, and more, making functional components as powerful as class components in React.

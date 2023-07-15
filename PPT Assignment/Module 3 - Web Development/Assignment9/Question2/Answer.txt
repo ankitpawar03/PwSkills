@@ -1,0 +1,31 @@
+Q.2 Explain useState Hook & what can you achieve with it?
+Ans- The `useState` hook is one of the most commonly used hooks in React. It allows you to add state to functional components. With `useState`, you can declare and manage state variables within your functional component, just like you would with `this.state` in class components.
+
+Here's how you can use the `useState` hook:
+
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a state variable called "count" with an initial value of 0
+  const [count, setCount] = useState(0);
+
+  // Increment the count when the button is clicked
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+
+In the example above, we call the `useState` hook and pass an initial value of 0. It returns an array with two elements: the current state value (`count`) and a function (`setCount`) to update the state.
+
+By convention, the array returned by `useState` is destructured, assigning the first element to the state variable (`count`) and the second element to the setter function (`setCount`). The setter function can be invoked to update the state value.
+
+In the example, when the button is clicked, the `increment` function is called, which updates the state by calling `setCount` with the new value (`count + 1`).
+
+The `useState` hook is useful for managing component state and triggering re-renders when the state changes. It allows functional components to have their own internal state without the need for class components. With `useState`, you can achieve dynamic and interactive behavior by storing and updating state values within functional components.
