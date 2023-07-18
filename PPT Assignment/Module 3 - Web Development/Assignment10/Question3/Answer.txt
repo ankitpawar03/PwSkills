@@ -1,0 +1,21 @@
+Q.3 What are REST API ?
+Ans - REST API stands for Representational State Transfer Application Programming Interface. It is a set of architectural principles and conventions for building web services that use HTTP and its various methods (such as GET, POST, PUT, DELETE) to perform CRUD (Create, Read, Update, Delete) operations on resources.
+
+The key principles and characteristics of RESTful APIs include:
+
+1. **Statelessness**: Each request from a client to a server must contain all the information needed to understand and process the request. The server doesn't store any client state between requests, making it easier to scale and manage the API.
+
+2. **Resources**: Resources are the key entities that REST APIs expose. Resources can be any information or data, such as user profiles, products, posts, etc. Each resource is identified by a unique URL (Uniform Resource Locator).
+
+3. **HTTP Methods**: REST APIs use standard HTTP methods to perform actions on resources. The most commonly used HTTP methods are:
+
+   - GET: Retrieve a representation of a resource.
+   - POST: Create a new resource.
+   - PUT: Update an existing resource.
+   - DELETE: Delete a resource.
+
+4. **Uniform Interface**: RESTful APIs have a uniform interface, which means the same conventions and principles are applied consistently across all resources. This simplifies client-server communication and improves the discoverability of the API.
+
+5. **Representation**: Resources can have multiple representations, such as JSON, XML, HTML, etc. The client can specify the desired representation through the HTTP `Accept` header.
+
+6. **Hypermedia as the Engine of Application State (HATEOAS)**: This principle suggests that the API responses should include hyperlinks that allow the client to navigate and interact with the application dynamically. The client should follow these links to access different resources and actions.

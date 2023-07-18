@@ -1,0 +1,16 @@
+Q.2 Why use Express Over NodeJS ?
+Ans - It's essential to understand that Express and Node.js are not direct competitors but rather complementary technologies. Node.js is a server-side runtime environment for executing JavaScript code outside a web browser. On the other hand, Express is a web application framework built on top of Node.js. So, it's more accurate to compare Express with other Node.js web frameworks rather than Node.js itself.
+
+Here are some reasons why to use Express over building a web application directly with Node.js or using other Node.js web frameworks:
+
+1. **Simplicity and Minimalism**: Express is known for its minimalistic and straightforward design. It provides just enough structure and features to build web applications without overwhelming developers with unnecessary complexity. If you want a simple and clean foundation for your web application, Express is a great choice.
+
+2. **Middleware Support**: Express has a robust middleware system that allows developers to easily implement features such as authentication, logging, CORS handling, and error management. This modular approach simplifies the development process by separating concerns and promoting code reusability.
+
+3. **Large Community and Ecosystem**: Express has been around for quite some time and has garnered a massive community of developers. This means there are plenty of resources, libraries, and extensions available, making it easier to find solutions to common problems and efficiently extend the functionality of your application.
+
+4. **Flexibility**: Express does not impose strict conventions, allowing developers to structure their applications as they see fit. This flexibility is particularly appealing for projects with unique requirements or when you prefer a more customized approach to application development.
+
+5. **Learning Curve**: Compared to some other Node.js web frameworks, Express has a relatively shallow learning curve. Its straightforward design and extensive documentation make it accessible to developers of different skill levels, including those new to Node.js and web development.
+
+6. **Maturity and Stability**: Being one of the oldest and most widely used Node.js web frameworks, Express has proven its stability and maturity over time. This makes it a reliable choice for production-level applications, and many companies and developers trust it for building scalable and robust web services.
